@@ -1,10 +1,11 @@
 <?php
 if($_POST){
  $num = $_POST['num'];
-if($num < 0){
-    $message = "<h2> the number is negative </h2>";
+ $number = $num%2;
+if($number == 0){
+    $message = "<h2> the number is even </h2>";
 }else{
-    $message = "<h2> the number is positive</h2>";
+    $message = "<h2> the number is odd </h2>";
 }
 }
 ?>
@@ -35,7 +36,7 @@ if($num < 0){
                             echo $message;
                         } ?>
               <div class="form-group">
-                    <button class="btn btn-outline-primary"> check the number </button>
+                    <button class="btn btn-outline-primary"> check </button>
               </div>
         </form>
       </div>

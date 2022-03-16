@@ -1,19 +1,18 @@
 <?php
 if($_POST){
- $num = $_POST['num'];
-if($num < 0){
-    $message = "<h2> the number is negative </h2>";
-}else{
-    $message = "<h2> the number is positive</h2>";
+ $num1 = $_POST['num1'];
+ $num2 = $_POST['num2'];
+ $message = pow($num1 , 1/$num2);
 }
-}
+
 ?>
 <!doctype html>
 <html lang="en">
   <head>
-    <title>neg-pos</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -21,26 +20,31 @@ if($num < 0){
   </head>
   <body>
   <div class="container">
-    <div class="row ">
-      <div class="col-12 mt-5 text-center text-primary font-weight-bold h3">
-                  neg-pos
-      </div>
-      <div class="col-4 offset-4 mt-5 text-center">
-         <form action="" method="post">
-         <div class="form-group">
-               <input type="number" name="num" id="num1" class="form-control" placeholder="Enter Your num1" aria-describedby="helpId">
-          </div>
-             
-              <?php  if(isset($message)){
+          <div class="row ">
+              <div class="col-12 mt-5 text-center text-primary font-weight-bold h3">
+                  Root
+              </div>
+              <div class="col-4 offset-4 mt-5 text-center">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="num"> first number</label>
+                          <input type="number" name="num1" id="name" class="form-control" placeholder="please enter number" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="num">second number</label>
+                          <input type="number" name="num2" id="name" class="form-control" placeholder="please enter number" aria-describedby="helpId">
+                        </div>
+                       
+                        <div class="form-group">
+                           <button class="btn btn-outline-primary">GET DATA </button>
+                        </div>
+                        <?php  if(isset($message)){
                             echo $message;
                         } ?>
-              <div class="form-group">
-                    <button class="btn btn-outline-primary"> check the number </button>
+                    </form>
               </div>
-        </form>
-      </div>
-     </div>
-    </div>
+          </div>
+      </div
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
